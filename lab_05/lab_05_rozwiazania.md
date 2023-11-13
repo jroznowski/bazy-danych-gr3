@@ -2,6 +2,6 @@
 
 ## Zadanie 1
 * Zadanie 1 a)
-'''sql
+```sql
 DELETE from postac WHERE NOT nazwa='Bjorn' AND rodzaj='wiking' ORDER BY wiek DESC LIMIT 2;
-'''
+```
