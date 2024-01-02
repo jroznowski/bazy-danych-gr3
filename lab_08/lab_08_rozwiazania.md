@@ -50,5 +50,5 @@ SELECT w.nazwa, ((SUM(z.waga*e.ilosc)/COUNT(DISTINCT u.id_uczestnika))) AS sredn
 ## Zadanie 5
 * Zadanie 5.1
 ```sql
-SELECT k.nazwa,DATEDIFF(day,DAY(k.dataUr),DAY(w.data_rozpoczecia)) FROM kreatura k JOIN uczestnicy u ON u.id_uczestnika=k.idKreatury JOIN wyprawa w ON w.id_wyprawy=u.id_wyprawy;
+SELECT k.nazwa,DATEDIFF(w.data_rozpoczecia,k.dataUr) FROM kreatura k JOIN uczestnicy u ON u.id_uczestnika = k.idKreatury JOIN wyprawa w ON w.id_wyprawy = u.id_wyprawy JOIN etapy_wyprawy ew ON u.id_wyprawy = ew.idWyprawy WHERE ew.sektor = '7';
 ```
